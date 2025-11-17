@@ -260,3 +260,109 @@
     console.log('FoodWare Landing Page initialized successfully! 🌿');
     
 })();
+
+
+// =========================================================================
+    // MODAL Y FORMULARIO DE CONTACTO
+    // =========================================================================
+    const modal = document.getElementById('contact-modal');
+    const modalForm = document.getElementById('modal-contact-form');
+    const modalStatus = document.getElementById('modal-message-status');
+    const openModalLinks = document.querySelectorAll('a[data-target="contact-modal"], a[href="#contacto"]');
+    const closeModalButton = document.querySelector('.modal__close');
+
+    function openModal(e) {
+        if (e) {
+            e.preventDefault();
+        }
+        if (modal) {
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // Evitar scroll del body
+            // Enfocar el primer campo para accesibilidad
+            document.getElementById('modal-name').focus();
+        }
+    }
+
+    function closeModal() {
+        if (modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = '';
+            
+            // Limpiar estado y formulario
+            if (modalStatus) {
+                modalStatus.textContent = '';
+                modalStatus.className = 'form-status';
+            }
+            if (modalForm) {
+                modalForm.reset();
+            }
+        }
+    }
+
+    // Abrir Modal
+    openModalLinks.forEach(link => {
+        link.addEventListener('click', openModal);
+    });
+
+    // Cerrar Modal con botón o click fuera
+    if (closeModalButton) {
+        closeModalButton.addEventListener('click', closeModal);
+    }
+    
+    if (modal) {
+        // Cerrar modal al hacer clic en el fondo oscuro
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Cerrar modal al presionar Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                closeModal();
+            }
+        });
+    }
+
+    // Validación y Envío del Formulario
+    if (modalForm) {
+        modalForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Obtener valores del formulario
+            const formData = {
+                name: document.getElementById('modal-name').value.trim(),
+                email: document.getElementById('modal-email').value.trim(),
+                company: document.getElementById('modal-company').value.trim(),
+                message: document.getElementById('modal-message').value.trim()
+            };
+            
+            // Validación básica (solo por si el HTML5 falla)
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!formData.name || !formData.email || !formData.message) {
+                modalStatus.textContent = 'Por favor completa todos los campos requeridos.';
+                modalStatus.className = 'form-status error';
+                return;
+            }
+            if (!emailRegex.test(formData.email)) {
+                modalStatus.textContent = 'Por favor ingresa un email válido.';
+                modalStatus.className = 'form-status error';
+                return;
+            }
+            
+            // Simular envío (integrar con backend aquí)
+            console.log('Formulario enviado:', formData);
+            
+            // Mostrar mensaje de éxito (Simulado)
+            modalStatus.textContent = '¡Gracias! Hemos recibido tu mensaje.';
+            modalStatus.className = 'form-status success';
+
+            // Limpiar formulario después de un breve retraso
+            setTimeout(() => {
+                modalForm.reset();
+            }, 1000); 
+            
+            // En un entorno de producción, aquí integrarías un `fetch`
+        });
+    }

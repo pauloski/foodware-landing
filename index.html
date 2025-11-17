@@ -37,7 +37,7 @@
                     <li role="none"><a href="#inicio" class="nav__link" role="menuitem">Inicio</a></li>
                     <li role="none"><a href="#productos" class="nav__link" role="menuitem">Productos</a></li>
                     <li role="none"><a href="#nosotros" class="nav__link" role="menuitem">Nosotros</a></li>
-                    <li role="none"><a href="#contacto" class="nav__link nav__link--cta" role="menuitem">Contacto</a></li>
+                     <li role="none"><a href="#contacto" class="nav__link nav__link--cta" role="menuitem" data-target="contact-modal">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -55,8 +55,8 @@
                         Reemplaza formularios en papel con una solución digital completa. Gestiona registros HACCP, supervisa procesos y genera reportes automáticos desde cualquier dispositivo.
                     </p>
                     <div class="hero__actions">
-                        <a href="#productos" class="btn btn--primary">Ver Productos</a>
-                        <a href="#contacto" class="btn btn--secondary">Contáctanos</a>
+                        <a href="#" class="btn btn--primary" data-target="contact-modal">Contacto</a>
+                        <a href="brochure.pdf" class="btn btn--secondary" target="_blank">Conoce más</a>
                     </div>
                 </div>
                 <div class="hero__image">
@@ -244,41 +244,45 @@
             </div>
         </section>
 
-        <!-- CONTACT SECTION -->
-        <section id="contacto" class="contact" role="region" aria-labelledby="contact-title">
-            <div class="container">
-                <h2 id="contact-title" class="section__title">¿Listo para hacer el cambio?</h2>
-                <p class="section__subtitle">
-                    Contáctanos y descubre cómo FoodWare puede ayudarte a ser más sostenible
-                </p>
-                
-                <form class="contact-form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name" class="form-label">Nombre completo</label>
-                        <input type="text" id="name" name="name" class="form-input" required aria-required="true">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email" class="form-label">Correo electrónico</label>
-                        <input type="email" id="email" name="email" class="form-input" required aria-required="true">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="company" class="form-label">Empresa</label>
-                        <input type="text" id="company" name="company" class="form-input">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message" class="form-label">Mensaje</label>
-                        <textarea id="message" name="message" class="form-textarea" rows="5" required aria-required="true"></textarea>
-                    </div>
-                    
-                    <button type="submit" class="btn btn--primary btn--full">Enviar mensaje</button>
-                </form>
-            </div>
-        </section>
-
+   
     </main>
+
+
+<div id="contact-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" style="display: none;">
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Cerrar formulario de contacto">×</button>
+            <h2 id="modal-title" class="section__title">Contacta con FoodWare</h2>
+            <p class="section__subtitle">
+                Agenda una demostración y comienza a digitalizar tu control de calidad.
+            </p>
+            
+            <form id="modal-contact-form" class="contact-form" action="#" method="POST">
+                <div class="form-group">
+                    <label for="modal-name" class="form-label">Nombre completo</label>
+                    <input type="text" id="modal-name" name="name" class="form-input" required aria-required="true">
+                </div>
+                
+                <div class="form-group">
+                    <label for="modal-email" class="form-label">Correo electrónico</label>
+                    <input type="email" id="modal-email" name="email" class="form-input" required aria-required="true">
+                </div>
+                
+                <div class="form-group">
+                    <label for="modal-company" class="form-label">Empresa</label>
+                    <input type="text" id="modal-company" name="company" class="form-input">
+                </div>
+                
+                <div class="form-group">
+                    <label for="modal-message" class="form-label">Mensaje</label>
+                    <textarea id="modal-message" name="message" class="form-textarea" rows="4" required aria-required="true"></textarea>
+                </div>
+                
+                <button type="submit" class="btn btn--primary btn--full">Enviar mensaje</button>
+                <div id="modal-message-status" class="form-status"></div>
+            </form>
+        </div>
+    </div>
+
 
     <!-- FOOTER -->
     <footer class="footer" role="contentinfo">
@@ -319,9 +323,20 @@
                 <div class="footer__section">
                     <h3 class="footer__title accent-text-inverse">Síguenos</h3>
                     <div class="footer__social">
-                        <a href="#" aria-label="Facebook" class="footer__social-link">FB</a>
-                        <a href="#" aria-label="Instagram" class="footer__social-link">IG</a>
-                        <a href="#" aria-label="LinkedIn" class="footer__social-link">IN</a>
+                      
+<a href="#" aria-label="Visita nuestro Facebook" class="footer__social-link">
+            <img src="img/facebook.svg" alt="Facebook Icon" >
+        </a>
+        
+        <a href="#" aria-label="Visita nuestro Instagram" class="footer__social-link">
+            <img src="img/instagram.svg" alt="Instagram Icon" >
+        </a>
+        
+        <a href="#" aria-label="Visita nuestro LinkedIn" class="footer__social-link">
+            <img src="img/linkedin.svg" alt="LinkedIn Icon" >
+        </a>
+
+
                     </div>
                 </div>
 
