@@ -1,12 +1,336 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample HTML Page</title>
+    <meta name="description" content="FoodWare - Soluciones sostenibles de empaque para alimentos. Reduce tu huella ecológica con nuestros productos compostables y biodegradables.">
+    <title>FoodWare - Empaques Sostenibles para Alimentos</title>
+    
+    <!-- Google Fonts - Opcional: usar Poppins y Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Welcome to the Sample HTML Page</h1>
-    <p>This is a simple HTML document structure.</p>
-</body>     
+    
+    <!-- HEADER / NAVIGATION -->
+    <header class="header" role="banner">
+        <div class="container">
+            <nav class="nav" role="navigation" aria-label="Navegación principal">
+                <!-- Logo -->
+                <div class="nav__logo">
+                    <!-- REEMPLAZAR: Logo de FoodWare -->
+                    <img src="img/logo.svg" alt="FoodWare Logo" width="150" height="50">
+                </div>
+                
+                <!-- Menu Toggle (Mobile) -->
+                <button class="nav__toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </button>
+                
+                <!-- Navigation Links -->
+                <ul class="nav__menu" role="menubar">
+                    <li role="none"><a href="#inicio" class="nav__link" role="menuitem">Inicio</a></li>
+                    <li role="none"><a href="#productos" class="nav__link" role="menuitem">Productos</a></li>
+                    <li role="none"><a href="#sostenibilidad" class="nav__link" role="menuitem">Sostenibilidad</a></li>
+                    <li role="none"><a href="#nosotros" class="nav__link" role="menuitem">Nosotros</a></li>
+                    <li role="none"><a href="#contacto" class="nav__link nav__link--cta" role="menuitem">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="inicio" class="hero" role="region" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 id="hero-title" class="hero__title">
+                     Digitaliza tu Control de Calidad Alimentaria
+                    </h1>
+                    <p class="hero__subtitle">
+                        Reemplaza formularios en papel con una solución digital completa. Gestiona registros HACCP, supervisa procesos y genera reportes automáticos desde cualquier dispositivo.
+                    </p>
+                    <div class="hero__actions">
+                        <a href="#productos" class="btn btn--primary">Ver Productos</a>
+                        <a href="#contacto" class="btn btn--secondary">Contáctanos</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <!-- REEMPLAZAR: Imagen hero (productos FoodWare / packaging sostenible) - Ratio 16:9 o 4:3 -->
+                    <img src="img/hero-img.png" alt="Productos FoodWare sostenibles" width="600" height="400">
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <section class="features" role="region" aria-labelledby="features-title">
+            <div class="container">
+                <h2 id="features-title" class="section__title">Todo lo que necesitas para el control de calidad</h2>
+                <p class="section__subtitle">Una solución completa que se adapta a las necesidades específicas de tu negocio alimentario</p>
+                <div class="features__grid">
+                    
+                    <!-- Feature 1 -->
+                    <article class="feature-card">
+                        <div class="feature-card__icon">
+                            <!-- REEMPLAZAR: Icono de hoja / sostenibilidad - 64x64px -->
+                            <img src="img/feature1.svg" alt="" width="64" height="64" aria-hidden="true">
+                        </div>
+                        <h3 class="feature-card__title">Cumplimiento HACCP</h3>
+                        <p class="feature-card__text">
+                          Garantiza el cumplimiento de normas de seguridad alimentaria con registros automáticos y trazabilidad completa.
+                        </p>
+                    </article>
+
+                    <!-- Feature 2 -->
+                    <article class="feature-card">
+                        <div class="feature-card__icon">
+                            <!-- REEMPLAZAR: Icono de escudo / seguridad alimentaria - 64x64px -->
+                            <img src="img/feature2.svg" alt="" width="64" height="64" aria-hidden="true">
+                        </div>
+                        <h3 class="feature-card__title">Acceso Móvil</h3>
+                        <p class="feature-card__text">
+                            Supervisores pueden validar procesos desde tablets y móviles, optimizando el trabajo en campo.
+                        </p>
+                    </article>
+
+                    <!-- Feature 3 -->
+                    <article class="feature-card">
+                        <div class="feature-card__icon">
+                            <!-- REEMPLAZAR: Icono de reciclaje / economía circular - 64x64px -->
+                            <img src="img/feature3.svg" alt="" width="64" height="64" aria-hidden="true">
+                        </div>
+                        <h3 class="feature-card__title">Gestión de Equipos</h3>
+                        <p class="feature-card__text">
+                          Organiza grupos de trabajo, asigna tareas y monitorea el desempeño de todo tu equipo.
+                        </p>
+                    </article>
+
+                    <!-- Feature 4 -->
+                    <article class="feature-card">
+                        <div class="feature-card__icon">
+                            <!-- REEMPLAZAR: Icono de certificación / calidad - 64x64px -->
+                            <img src="img/feature4.svg" alt="" width="64" height="64" aria-hidden="true">
+                        </div>
+                        <h3 class="feature-card__title">Reportes Inteligentes</h3>
+                        <p class="feature-card__text">
+                           Genera reportes automáticos con métricas clave y análisis de tendencias en tiempo real.
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCTS SECTION -->
+        <section id="productos" class="products" role="region" aria-labelledby="products-title">
+            <div class="container">
+                <h2 id="products-title" class="section__title">Dos portales, una solución completa</h2>
+                <p class="section__subtitle">
+                   Portal administrativo para gestión completa y aplicación móvil para supervisores en campo
+                </p>
+                
+                <div class="products__grid">
+                    
+                    <!-- Product 1 -->
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <!-- REEMPLAZAR: Imagen de contenedores para alimentos - Ratio 1:1 (cuadrada) -->
+                            <img src="https://via.placeholder.com/350x350/4CAF50/FFFFFF?text=Contenedores" alt="Contenedores compostables FoodWare" width="350" height="350">
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Contenedores</h3>
+                            <p class="product-card__description">
+                                Ideales para comida preparada, ensaladas y productos frescos. 
+                                Resistentes a líquidos y microondas.
+                            </p>
+                            <a href="#contacto" class="product-card__link">Más información →</a>
+                        </div>
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article class="product-card">
+                        <div class="product-card__image">
+                            <!-- REEMPLAZAR: Imagen de vasos y tazas - Ratio 1:1 -->
+                            <img src="https://via.placeholder.com/350x350/FF9800/FFFFFF?text=Vasos" alt="Vasos biodegradables FoodWare" width="350" height="350">
+                        </div>
+                        <div class="product-card__content">
+                            <h3 class="product-card__title">Vasos y Tazas</h3>
+                            <p class="product-card__description">
+                                Perfectos para bebidas frías y calientes. 
+                                Disponibles en múltiples tamaños.
+                            </p>
+                            <a href="#contacto" class="product-card__link">Más información →</a>
+                        </div>
+                    </article>
+
+                 
+
+                </div>
+            </div>
+        </section>
+
+  
+
+        <!-- ABOUT SECTION -->
+        <section id="nosotros" class="about" role="region" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title" class="section__title">Sobre FoodWare</h2>
+                <div class="about__content">
+                    <div class="about__text">
+                        <p>
+                            Fundada en 2015, FoodWare nació con la misión de transformar 
+                            la industria del empaque alimentario. Somos pioneros en soluciones 
+                            sostenibles que no comprometen calidad ni funcionalidad.
+                        </p>
+                        <p>
+                            Trabajamos con restaurantes, servicios de catering, food trucks 
+                            y empresas de delivery en toda Latinoamérica, ayudándoles a 
+                            reducir su huella ambiental mientras mantienen la excelencia 
+                            en el servicio.
+                        </p>
+                    </div>
+                    <div class="about__image">
+                        <!-- REEMPLAZAR: Imagen del equipo / instalaciones - Ratio 16:9 -->
+                        <img src="img/img-lab.png" alt="Equipo FoodWare" width="600" height="337">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contacto" class="contact" role="region" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title" class="section__title">¿Listo para hacer el cambio?</h2>
+                <p class="section__subtitle">
+                    Contáctanos y descubre cómo FoodWare puede ayudarte a ser más sostenible
+                </p>
+                
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Nombre completo</label>
+                        <input type="text" id="name" name="name" class="form-input" required aria-required="true">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Correo electrónico</label>
+                        <input type="email" id="email" name="email" class="form-input" required aria-required="true">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="company" class="form-label">Empresa</label>
+                        <input type="text" id="company" name="company" class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="form-label">Mensaje</label>
+                        <textarea id="message" name="message" class="form-textarea" rows="5" required aria-required="true"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary btn--full">Enviar mensaje</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__content">
+                
+                <!-- Footer Logo & Info -->
+                <div class="footer__section">
+                    <div class="footer__logo">
+                        <!-- REEMPLAZAR: Logo footer -->
+                        <img src="https://via.placeholder.com/150x50/FFFFFF/4CAF50?text=FoodWare" alt="FoodWare" width="150" height="50">
+                    </div>
+                    <p class="footer__text">
+                        Empaques sostenibles para un futuro mejor.
+                    </p>
+                </div>
+
+                <!-- Footer Links -->
+                <div class="footer__section">
+                    <h3 class="footer__title">Enlaces</h3>
+                    <ul class="footer__links">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#sostenibilidad">Sostenibilidad</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Contact -->
+                <div class="footer__section">
+                    <h3 class="footer__title">Contacto</h3>
+                    <ul class="footer__contact">
+                        <li>info@foodware.com</li>
+                        <li>+56 2 1234 5678</li>
+                        <li>Santiago, Chile</li>
+                    </ul>
+                </div>
+
+                <!-- Footer Social -->
+                <div class="footer__section">
+                    <h3 class="footer__title">Síguenos</h3>
+                    <div class="footer__social">
+                        <a href="#" aria-label="Facebook" class="footer__social-link">FB</a>
+                        <a href="#" aria-label="Instagram" class="footer__social-link">IG</a>
+                        <a href="#" aria-label="LinkedIn" class="footer__social-link">IN</a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="footer__bottom">
+                <p>&copy; 2025 FoodWare. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
+
+<!--
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                    INSTRUCCIONES PARA REEMPLAZAR ASSETS                      ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+1. IMÁGENES A REEMPLAZAR:
+   - Logo header (línea 20): 150x50px, formato PNG con transparencia
+   - Imagen hero (línea 58): 600x400px aprox, ratio 3:2, JPG/PNG
+   - Iconos features (líneas 72, 83, 94, 105): 64x64px, SVG o PNG
+   - Productos (líneas 133, 146, 159): 350x350px, ratio 1:1, JPG/PNG
+   - Sostenibilidad (línea 199): 500x375px, ratio 4:3, JPG/PNG
+   - About (línea 221): 600x337px, ratio 16:9, JPG/PNG
+   - Logo footer (línea 263): 150x50px, PNG con transparencia
+
+2. OPTIMIZACIÓN DE IMÁGENES:
+   - Comprimir todas las imágenes (TinyPNG, ImageOptim)
+   - Usar formatos modernos (WebP) con fallback a JPG/PNG
+   - Considerar lazy loading: agregar loading="lazy" a imágenes below-the-fold
+
+3. VARIABLES CSS A PERSONALIZAR:
+   - Editar :root en styles.css para cambiar colores, tipografías y espaciados
+   - Variables principales: --color-primary, --color-secondary, --font-primary
+
+4. FUENTES:
+   - Google Fonts incluido (Poppins + Open Sans)
+   - Para usar fuentes del sistema, eliminar <link> de línea 12-14 
+     y descomentar font-stack alternativo en styles.css
+
+5. FORMULARIO DE CONTACTO:
+   - Actualizar action="#" en línea 227 con URL de backend/servicio de email
+   - Considerar integración con FormSpree, Netlify Forms o backend propio
+
+6. DESPLIEGUE:
+   - Abrir index.html directamente en navegador para preview local
+   - Para producción: subir archivos a hosting (Netlify, Vercel, GitHub Pages)
+   - Verificar rutas relativas de assets antes de desplegar
+-->
