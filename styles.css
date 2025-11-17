@@ -1,3 +1,6 @@
+
+
+
 /*
 ======================================================
 VARIABLES CSS
@@ -6,7 +9,7 @@ VARIABLES CSS
 :root {
     /* Colores - Actualizados según la solicitud del usuario */
     --color-primary: #027DA2;      /* Azul: Botones principales, enlaces, acentos */
-    --color-secondary: #FF9800;    /* Naranja: Acuaciones secundarias, íconos */
+    --color-secondary: #035075;    /* Naranja: Acuaciones secundarias, íconos */
     --color-text-dark: #333333;    /* Texto principal oscuro */
     --color-text-light: #666666;   /* Texto secundario o descriptivo */
     --color-background-light: #F4F4F4; /* Gris muy claro para secciones alternas */
@@ -341,7 +344,7 @@ SECCIÓN FEATURES
 
 /*
 ======================================================
-SECCIÓN PRODUCTS
+SECCIÓN PRODUCTS (Antigua versión, mantenida por compatibilidad si se usa)
 ======================================================
 */
 .products {
@@ -555,7 +558,7 @@ FOOTER
 }
 
 .footer__logo img {
-    height: 30px;
+    height: 55px;
     width: auto;
     margin-bottom: var(--spacing-sm);
 }
@@ -743,6 +746,16 @@ MEDIA QUERIES (RESPONSIVE DESIGN)
     .footer__content {
         grid-template-columns: 2fr 1fr 1fr 1fr;
     }
+
+    /* PORTALS - Desktop 768px: Configuración de la nueva fila de tarjetas */
+    .portals__row {
+        flex-direction: row; /* Desktop: Fila (lado a lado) */
+        gap: var(--spacing-xl);
+    }
+    
+    .portal-card {
+        flex: 1; /* Ambas tarjetas ocupan el mismo espacio */
+    }
 }
 
 /* Punto de quiebre 1024px: Desktop */
@@ -752,7 +765,7 @@ MEDIA QUERIES (RESPONSIVE DESIGN)
     }
 
     .hero__title {
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     .products__grid {
@@ -762,4 +775,180 @@ MEDIA QUERIES (RESPONSIVE DESIGN)
     .footer__content {
         grid-template-columns: 3fr 1fr 1fr 1fr;
     }
+}
+
+/* CHIPS */
+.chip {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+}
+
+.chip--mobile {
+    background: #dcfce7;
+    color: #064e3b;
+}
+
+.chip--admin {
+    background: #e6f0ff;
+    color: #0b3a66;
+}
+
+/*
+======================================================
+SECCIÓN PORTALS (SOLUCIÓN DE 2 CARDS EN FILA)
+======================================================
+*/
+.portals {
+    padding: var(--spacing-xl) 0;
+}
+
+/* El nuevo contenedor para las dos tarjetas (Mobile: Columna, Desktop: Fila) */
+.portals__row {
+    display: flex;
+    flex-direction: column; /* Mobile: Columna */
+    gap: var(--spacing-lg);
+}
+
+/* Estilo de cada tarjeta (apila el contenido verticalmente) */
+.portal-card {
+    background-color: var(--color-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    border: solid 1px var(--color-border); /* Se toma del último cambio */
+    
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+    text-align: left;
+}
+
+/* No se usan los modificadores de fila, pero se mantienen sin efecto de layout */
+.portal-card--reverse {
+    /* Mantener para compatibilidad, pero ya no tiene efecto de layout */
+}
+
+.portal-card__content {
+    width: 100%;
+}
+
+.portal-card__title {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.portal-card__text {
+    margin-bottom: 0;
+    color: var(--color-text-light);
+}
+
+.portal-card__image {
+    width: 100%;
+    text-align: center;
+}
+
+.portal-card__image img {
+    width: 100%;
+    max-width: 400px; 
+    height: auto;
+    border-radius: var(--border-radius-sm);
+    box-shadow: none;
+}
+
+/* TESTIMONIALS */
+.testimonials {
+    padding: var(--spacing-xl) 0;
+    background: var(--color-background-light);
+}
+
+.testimonials__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.testimonial-card {
+    background: var(--color-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow-sm);
+}
+
+.testimonial-text {
+    font-style: italic;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-text-dark);
+}
+
+.testimonial-author {
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    .testimonials__grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Listas con icono */
+.portal-card__list--icon {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0; /* Se toma del último cambio */
+    width: 100%; /* Se toma del último cambio */
+}
+
+.portal-card__list--icon li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-family: var(--font-secondary);
+    color: var(--color-text-dark);
+}
+
+.portal-card__list--icon li img {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    margin-top: 3px; /* alineación vertical */
+}
+
+
+.portal-card__list {
+    /* La lista también toma el ancho completo */
+    width: 100%;
+    padding-left: 0;
+    list-style: none; /* Asegura que no haya viñetas de lista por defecto */
+    margin-top: 0;
+}
+
+
+/* Desktop: Media Query 768px */
+@media (min-width: 768px) {
+    /* Cambiamos el contenedor principal de columna a fila */
+    .portals__row {
+        flex-direction: row; /* Desktop: Fila (lado a lado) */
+        gap: var(--spacing-xl);
+    }
+    
+    .portal-card {
+        flex: 1; /* Ambas tarjetas ocupan el mismo espacio */
+        /* La estructura interna sigue siendo columna (chip, texto, imagen, lista) */
+    }
+
+}
+.accent-text{
+    color: var(--color-primary);
+}
+
+.accent-text-inverse{
+    color: #fff;
 }

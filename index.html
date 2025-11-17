@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-    
+    <link rel="icon" type="image/png" href="img/favicon.png">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -36,7 +36,6 @@
                 <ul class="nav__menu" role="menubar">
                     <li role="none"><a href="#inicio" class="nav__link" role="menuitem">Inicio</a></li>
                     <li role="none"><a href="#productos" class="nav__link" role="menuitem">Productos</a></li>
-                    <li role="none"><a href="#sostenibilidad" class="nav__link" role="menuitem">Sostenibilidad</a></li>
                     <li role="none"><a href="#nosotros" class="nav__link" role="menuitem">Nosotros</a></li>
                     <li role="none"><a href="#contacto" class="nav__link nav__link--cta" role="menuitem">Contacto</a></li>
                 </ul>
@@ -50,7 +49,7 @@
             <div class="container">
                 <div class="hero__content">
                     <h1 id="hero-title" class="hero__title">
-                     Digitaliza tu Control de Calidad Alimentaria
+                     Digitaliza tu <span class="accent-text">Control de Calidad</span> Alimentaria
                     </h1>
                     <p class="hero__subtitle">
                         Reemplaza formularios en papel con una solución digital completa. Gestiona registros HACCP, supervisa procesos y genera reportes automáticos desde cualquier dispositivo.
@@ -127,54 +126,97 @@
         </section>
 
         <!-- PRODUCTS SECTION -->
-        <section id="productos" class="products" role="region" aria-labelledby="products-title">
-            <div class="container">
-                <h2 id="products-title" class="section__title">Dos portales, una solución completa</h2>
-                <p class="section__subtitle">
-                   Portal administrativo para gestión completa y aplicación móvil para supervisores en campo
-                </p>
-                
-                <div class="products__grid">
+
+<section id="productos" class="portals" role="region" aria-labelledby="portals-title">
+    <div class="container">
+        <h2 id="portals-title" class="section__title">Dos portales, una solución completa</h2>
+        <p class="section__subtitle">
+            Portal administrativo para gestión completa y aplicación móvil para supervisores en campo
+        </p>
+
+        <div class="portals__row">
+
+            <article class="portal-card">
+                <div class="portal-card__content">
                     
-                    <!-- Product 1 -->
-                    <article class="product-card">
-                        <div class="product-card__image">
-                            <!-- REEMPLAZAR: Imagen de contenedores para alimentos - Ratio 1:1 (cuadrada) -->
-                            <img src="https://via.placeholder.com/350x350/4CAF50/FFFFFF?text=Contenedores" alt="Contenedores compostables FoodWare" width="350" height="350">
-                        </div>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Contenedores</h3>
-                            <p class="product-card__description">
-                                Ideales para comida preparada, ensaladas y productos frescos. 
-                                Resistentes a líquidos y microondas.
-                            </p>
-                            <a href="#contacto" class="product-card__link">Más información →</a>
-                        </div>
-                    </article>
+                    <span class="chip chip--mobile">Portal Móvil Supervisor</span>
 
-                    <!-- Product 2 -->
-                    <article class="product-card">
-                        <div class="product-card__image">
-                            <!-- REEMPLAZAR: Imagen de vasos y tazas - Ratio 1:1 -->
-                            <img src="https://via.placeholder.com/350x350/FF9800/FFFFFF?text=Vasos" alt="Vasos biodegradables FoodWare" width="350" height="350">
-                        </div>
-                        <div class="product-card__content">
-                            <h3 class="product-card__title">Vasos y Tazas</h3>
-                            <p class="product-card__description">
-                                Perfectos para bebidas frías y calientes. 
-                                Disponibles en múltiples tamaños.
-                            </p>
-                            <a href="#contacto" class="product-card__link">Más información →</a>
-                        </div>
-                    </article>
-
-                 
-
+                    <h3 class="portal-card__title">Supervisión en tiempo real</h3>
+                    <p class="portal-card__text">
+                        Control total desde terreno, con acceso desde cualquier dispositivo móvil.
+                    </p>
                 </div>
-            </div>
-        </section>
+                <div class="portal-card__image">
+                    <img src="img/img-lab.png" 
+                         alt="Mockup aplicación móvil Foodware">
+                </div>
+                <ul class="portal-card__list portal-card__list--icon">
+    <li><img src="img/Icon-check.svg" alt=""> Trazabilidad completa de procesos</li>
+    <li><img src="img/Icon-check.svg" alt=""> Implementación en menos de 24 horas</li>
+    <li><img src="img/Icon-check.svg" alt=""> Soporte técnico especializado</li>
+</ul>
+            </article>
 
-  
+            <article class="portal-card">
+                <div class="portal-card__content">
+
+                    <span class="chip chip--admin">Portal Administrativo</span>
+
+                    <h3 class="portal-card__title">Control total desde escritorio</h3>
+                    <p class="portal-card__text">
+                        Gestiona operaciones, análisis de datos y cumplimiento normativo desde una plataforma centralizada.
+                    </p>
+                </div>
+                <div class="portal-card__image">
+                    <img src="img/img-lab.png" 
+                         alt="Mockup plataforma administrativa Foodware">
+                </div>
+                <ul class="portal-card__list portal-card__list--icon">
+    <li><img src="img/Icon-check.svg" alt=""> Reduce costos operativos hasta 40%</li>
+    <li><img src="img/Icon-check.svg" alt=""> Mejora la eficiencia del equipo</li>
+    <li><img src="img/Icon-check.svg" alt=""> Cumplimiento normativo garantizado</li>
+</ul>
+            </article>
+
+        </div>
+    </div>
+</section>
+<section class="testimonials" role="region" aria-labelledby="testimonials-title">
+    <div class="container">
+        <h2 id="testimonials-title" class="section__title">
+            Empresas que confían en Foodware
+        </h2>
+        <p class="section__subtitle">
+            Descubre cómo otros negocios han transformado su gestión de calidad
+        </p>
+
+        <div class="testimonials__grid">
+
+            <article class="testimonial-card">
+                <p class="testimonial-text">
+                    “La digitalización de nuestros procesos redujo un 35% los tiempos de supervisión.”
+                </p>
+                <span class="testimonial-author">— Green Foods</span>
+            </article>
+
+            <article class="testimonial-card">
+                <p class="testimonial-text">
+                    “Foodware nos permitió cumplir auditorías sin fricciones y con mejor trazabilidad.”
+                </p>
+                <span class="testimonial-author">— Patagonia Fresh</span>
+            </article>
+
+            <article class="testimonial-card">
+                <p class="testimonial-text">
+                    “El equipo adoptó el sistema en horas. El soporte fue clave para una transición rápida.”
+                </p>
+                <span class="testimonial-author">— Andes Quality</span>
+            </article>
+
+        </div>
+    </div>
+</section>
+
 
         <!-- ABOUT SECTION -->
         <section id="nosotros" class="about" role="region" aria-labelledby="about-title">
@@ -247,37 +289,35 @@
                 <div class="footer__section">
                     <div class="footer__logo">
                         <!-- REEMPLAZAR: Logo footer -->
-                        <img src="https://via.placeholder.com/150x50/FFFFFF/4CAF50?text=FoodWare" alt="FoodWare" width="150" height="50">
+                        <img src="img/logo-dark.svg" alt="FoodWare" width="150" height="50">
                     </div>
                     <p class="footer__text">
-                        Empaques sostenibles para un futuro mejor.
+                        La solución digital más completa para el control de calidad e inocuidad alimentaria. Digitaliza tus procesos y mejora la eficiencia de tu equipo.
                     </p>
                 </div>
 
                 <!-- Footer Links -->
                 <div class="footer__section">
-                    <h3 class="footer__title">Enlaces</h3>
+                    <h3 class="footer__title accent-text-inverse">Enlaces</h3>
                     <ul class="footer__links">
                         <li><a href="#inicio">Inicio</a></li>
                         <li><a href="#productos">Productos</a></li>
-                        <li><a href="#sostenibilidad">Sostenibilidad</a></li>
                         <li><a href="#nosotros">Nosotros</a></li>
                     </ul>
                 </div>
 
                 <!-- Footer Contact -->
                 <div class="footer__section">
-                    <h3 class="footer__title">Contacto</h3>
+                    <h3 class="footer__title accent-text-inverse">Contacto</h3>
                     <ul class="footer__contact">
                         <li>info@foodware.com</li>
                         <li>+56 2 1234 5678</li>
-                        <li>Santiago, Chile</li>
                     </ul>
                 </div>
 
                 <!-- Footer Social -->
                 <div class="footer__section">
-                    <h3 class="footer__title">Síguenos</h3>
+                    <h3 class="footer__title accent-text-inverse">Síguenos</h3>
                     <div class="footer__social">
                         <a href="#" aria-label="Facebook" class="footer__social-link">FB</a>
                         <a href="#" aria-label="Instagram" class="footer__social-link">IG</a>
@@ -297,40 +337,3 @@
 </body>
 </html>
 
-<!--
-╔══════════════════════════════════════════════════════════════════════════════╗
-║                    INSTRUCCIONES PARA REEMPLAZAR ASSETS                      ║
-╚══════════════════════════════════════════════════════════════════════════════╝
-
-1. IMÁGENES A REEMPLAZAR:
-   - Logo header (línea 20): 150x50px, formato PNG con transparencia
-   - Imagen hero (línea 58): 600x400px aprox, ratio 3:2, JPG/PNG
-   - Iconos features (líneas 72, 83, 94, 105): 64x64px, SVG o PNG
-   - Productos (líneas 133, 146, 159): 350x350px, ratio 1:1, JPG/PNG
-   - Sostenibilidad (línea 199): 500x375px, ratio 4:3, JPG/PNG
-   - About (línea 221): 600x337px, ratio 16:9, JPG/PNG
-   - Logo footer (línea 263): 150x50px, PNG con transparencia
-
-2. OPTIMIZACIÓN DE IMÁGENES:
-   - Comprimir todas las imágenes (TinyPNG, ImageOptim)
-   - Usar formatos modernos (WebP) con fallback a JPG/PNG
-   - Considerar lazy loading: agregar loading="lazy" a imágenes below-the-fold
-
-3. VARIABLES CSS A PERSONALIZAR:
-   - Editar :root en styles.css para cambiar colores, tipografías y espaciados
-   - Variables principales: --color-primary, --color-secondary, --font-primary
-
-4. FUENTES:
-   - Google Fonts incluido (Poppins + Open Sans)
-   - Para usar fuentes del sistema, eliminar <link> de línea 12-14 
-     y descomentar font-stack alternativo en styles.css
-
-5. FORMULARIO DE CONTACTO:
-   - Actualizar action="#" en línea 227 con URL de backend/servicio de email
-   - Considerar integración con FormSpree, Netlify Forms o backend propio
-
-6. DESPLIEGUE:
-   - Abrir index.html directamente en navegador para preview local
-   - Para producción: subir archivos a hosting (Netlify, Vercel, GitHub Pages)
-   - Verificar rutas relativas de assets antes de desplegar
--->
